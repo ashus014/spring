@@ -10,7 +10,7 @@
 	
     <!-- Define your beans here -->
     
-    <bean id="myFortune"
+    <bean id="myFortuneService"
     	class = "com.ashu.springdemo.HappyFortuneService">
     	
     </bean>
@@ -20,8 +20,17 @@
     	
     	<!-- set up constructor injection -->
     	<constructor-arg
-			ref="myFortune">
+			ref="myFortuneService">
 		</constructor-arg>
+    </bean>
+    
+    
+    
+    <bean id="myCricketCoach"
+    	class = "com.ashu.springdemo.CricketCoach">
+    	
+    	<!-- set up setter injection -->
+    	<property name ="fortuneService" ref="myFortuneService"/>
     </bean>
 
 </beans>
