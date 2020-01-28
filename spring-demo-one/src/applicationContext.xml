@@ -16,7 +16,7 @@
     </bean>
     
     <bean id="myCoach"
-    	class = "com.ashu.springdemo.BaseballCoach">
+    	class = "com.ashu.springdemo.TrackCoach">
     	
     	<!-- set up constructor injection -->
     	<constructor-arg
