@@ -14,7 +14,8 @@
     </bean>
     
     <bean id="myCoach"
-    	class = "com.ashu.springdemo.TrackCoach">
+    	class = "com.ashu.springdemo.TrackCoach"
+    	scope = "prototype">
     	
     	<!-- set up constructor injection -->
     	<constructor-arg
