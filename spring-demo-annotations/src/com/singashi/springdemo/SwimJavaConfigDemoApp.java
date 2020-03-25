@@ -11,7 +11,7 @@ public class SwimJavaConfigDemoApp {
 				new AnnotationConfigApplicationContext(SportConfig.class);
 		
 		
-		Coach theCoach = context.getBean("swimCoach",Coach.class);
+		SwimCoach theCoach = context.getBean("swimCoach",SwimCoach.class);
 		
 		
 		System.out.println(theCoach.getDailyWorkout());
@@ -20,6 +20,11 @@ public class SwimJavaConfigDemoApp {
 		//call method to get daily fortune
 		System.out.println(theCoach.getDailyFortune());
 		
+		
+		
+		//call our new swim coach methods...has the props values injected
+		System.out.println("email :: " + theCoach.getEmail());
+		System.out.println("team :: " + theCoach.getTeam());
 		
 		context.close();
 		
