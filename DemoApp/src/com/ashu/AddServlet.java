@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -16,21 +17,17 @@ public class AddServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		
-		int i = Integer.parseInt(req.getParameter("num1"));
-		int j = Integer.parseInt(req.getParameter("num2"));
+		PrintWriter printWriter = res.getWriter();
+		printWriter.print("Hi<br>");
 		
-		int k = i + j;
+		ServletContext ctx = getServletContext();
+		String str = ctx.getInitParameter("phone");
+		
+		printWriter.println(str);
 		
 		
-		Cookie cookie = new Cookie("k",k+""); 
-		res.addCookie(cookie);
 		
-		//Using Session to Send Data
-		/*
-		 * HttpSession session = req.getSession(); session.setAttribute("k", k);
-		 */
 		
-		res.sendRedirect("sq");
 		
 	}
 

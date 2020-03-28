@@ -24,12 +24,6 @@ public class SqServlet extends HttpServlet {
 			}
 		}
 		
-		
-		/*Accepts Session 
-		 * HttpSession session = req.getSession(); int k = (int)
-		 * session.getAttribute("k");
-		 */
-
 		k = k * k;
 
 		PrintWriter out = res.getWriter();
