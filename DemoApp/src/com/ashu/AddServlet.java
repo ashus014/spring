@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -20,14 +21,9 @@ public class AddServlet extends HttpServlet{
 		PrintWriter printWriter = res.getWriter();
 		printWriter.print("Hi<br>");
 		
-		ServletContext ctx = getServletContext();
-		String str = ctx.getInitParameter("phone");
-		
+		ServletConfig cg = getServletConfig(); 
+		String str = cg.getInitParameter("name");
 		printWriter.println(str);
-		
-		
-		
-		
 		
 	}
 

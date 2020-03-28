@@ -4,6 +4,11 @@
 <servlet>
 	<servlet-name>abc</servlet-name>
 	<servlet-class>com.ashu.AddServlet</servlet-class>
+	
+	<init-param>
+		<param-name>name</param-name>
+		<param-value>AshuSingh</param-value>
+	</init-param>
 </servlet>
 
 <servlet-mapping>
