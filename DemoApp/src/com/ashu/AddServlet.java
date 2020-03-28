@@ -26,10 +26,10 @@ public class AddServlet extends HttpServlet{
 		
 		int k = i + j;
 		
-		Cookie cookie = new Cookie("k", k + "");
-		res.addCookie(cookie);
-		
-		res.sendRedirect("sq");
+		PrintWriter out = res.getWriter();
+		out.println("<html><body bgcolor='cyan'>");
+		out.println("Result is :: " + k);
+		out.println("</body></html>");
 		
 	}
 
