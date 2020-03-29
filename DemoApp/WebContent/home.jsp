@@ -21,6 +21,9 @@
 	
 	<%
 		out.println(7+5);
+		
+		pageContext.setAttribute("name", "Ashu");
+		
 	%>
 
 	My favourite number is :: <%= coef%>
