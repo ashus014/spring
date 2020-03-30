@@ -10,11 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	100 <br>
-	Navin <br>
-	88 <br>
-	
-	<br>
 	
 	<%
 	
