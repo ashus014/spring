@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
  <%@ page import = "java.sql.*" %>
+ <%@ page import = "java.util.*" %>
  
 <!DOCTYPE html>
 <html>
@@ -20,6 +21,7 @@
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con = DriverManager.getConnection(url,username,password);
 	Statement st = con.createStatement();
+	Scanner scan = new Scanner(System.in);
 	
 	ResultSet rs = st.executeQuery(sql);
 	rs.next();
